@@ -675,7 +675,7 @@ def _add_children_ids(tree):
     
     tree['children_ids'] = [set() for _ in range(len(tree))]
     
-    for node_id, parent_id in tree['parent_id'].iteritems():
+    for node_id, parent_id in tree['parent_id'].items():
         if parent_id != 0:
             tree.loc[parent_id, 'children_ids'].add(node_id)
             
